@@ -18,6 +18,7 @@ header {
   background-attachment: fixed;
 }
 
+
 .container {
   width: 80%;
   margin-inline: auto;
@@ -277,6 +278,12 @@ header {
   color: #fff;
 }
 
+.kontak .box-kontak button i {
+  font-size: 16px;
+  font-weight: bold;
+  margin-inline: 5px;
+}
+
 .social-media {
   display: flex;
   justify-content: center;
@@ -305,7 +312,7 @@ header {
 
 .box-galeri {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -419,6 +426,50 @@ header {
   row-gap: 10px;
 }
 
+/* Kontainer peta kontak */
+.contact-map {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 400px; /* Tentukan tinggi yang sesuai */
+}
+
+
+/* Gaya iframe Google Maps agar sesuai dengan ukuran kontainer */
+.contact-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Mengatur padding dan margin agar responsif */
+#contact {
+  padding: 50px 20px;
+  background-color: #080b0c;
+}
+
+#contact h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  #contact h1 {
+      font-size: 1.5em;
+  }
+
+  .contact-map {
+      padding-bottom: 75%; /* Adjust rasio untuk layar lebih kecil */
+  }
+}
+
 .footer .box-footer .box:nth-child(2) a {
   text-decoration: none;
   color: white;
@@ -445,9 +496,26 @@ header {
 
 @media screen and (max-width: 1200px) {
   .hero .box-hero .box:nth-child(1) button {
-    width: 150px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
   }
+  
 }
+
+.hero .box-hero .box:nth-child(1) button:hover {
+  background-color: #053e83;
+  transition: all 0.3s ease;
+}
+
+.hero .box-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 
 @media screen and (max-width: 990px) {
   .menu-bar {
